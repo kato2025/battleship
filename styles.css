@@ -1,0 +1,98 @@
+/* Define custom properties at the root level for easy modification */
+:root {
+  --main-font: 'Arial', sans-serif;
+  --main-background: #f0f0f0;
+  --container-background: #fff;
+  --container-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  --container-border-radius: 10px;
+  --container-padding: 20px;
+  --header-margin-bottom: 20px;
+  --board-margin-bottom: 20px;
+  --board-label-font-size: 30px;
+  --board-border: 2px solid #333;
+  --board-border-radius: 8px;
+  --cell-width: 30px;
+  --cell-height: 30px;
+  --cell-border: 1px solid #ccc;
+  --cell-hover-bg: #e0e0e0;
+  --hit-bg: #ff4d4d;
+  --miss-bg: #aaa;
+  --message-font-size: 18px;
+  --message-font-weight: bold;
+  --message-color: #333;
+}
+/* Apply styles to the body */
+body {
+  font-family: var(--main-font);
+  background-color: var(--main-background);
+  margin: 0;
+}
+/* Styling for the main game container */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--container-background);
+  border-radius: var(--container-border-radius);
+  padding: var(--container-padding);
+  box-shadow: var(--container-shadow);
+}
+/* Styling for the header section */
+.header {
+  text-align: center;
+  margin-bottom: var(--header-margin-bottom);
+}
+/* Styling for the board container */
+.board-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--board-margin-bottom);
+  flex-wrap: wrap;
+}
+/* Styling for the board label */
+.board-label {
+  font-size: var(--board-label-font-size);
+  text-align: center;
+}
+/* Styling for the game board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  border: var(--board-border);
+  border-radius: var(--board-border-radius);
+  overflow: hidden;
+}
+/* Styling for individual cells in the game board */
+.cell {
+  width: var(--cell-width);
+  height: var(--cell-height);
+  border: var(--cell-border);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+/* Hover effect for cells */
+.cell:hover {
+  background-color: var(--cell-hover-bg);
+}
+/* Styling for hit cells */
+.hit {
+  background-color: var(--hit-bg);
+}
+/* Styling for miss cells */
+.miss {
+  background-color: var(--miss-bg);
+}
+/* Styling for game messages */
+.message {
+  text-align: center;
+  font-size: var(--message-font-size);
+  font-weight: var(--message-font-weight);
+  color: var(--message-color);
+}

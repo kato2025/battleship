@@ -1,0 +1,48 @@
+<!--DOCTYPE declaration specifying HTML version and language-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set and viewport for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the web page -->
+    <title>Battleship Game</title>
+    <!-- Linking an external stylesheet for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for the game -->
+    <div class="game-container">
+        <!-- Header section -->
+        <div class="header">
+            <h1>Battleship Game</h1>
+        </div>
+        <!-- Container for the game boards -->
+        <div class="board-container">
+            <!-- Human player's board -->
+            <div class="human">
+                <!-- Label for the human player's board -->
+                <div class="board-label">Human</div>
+                <!-- Actual board element for the human player with ID 'player-board' -->
+                <div class="board" id="player-board"></div>
+            </div>
+            <!-- Computer player's board -->
+            <div class="computer">
+                <!-- Label for the computer player's board -->
+                <div class="board-label">Computer</div>
+                <!-- Actual board element for the computer player with ID 'computer-board' -->
+                <div class="board" id="computer-board"></div>
+            </div>
+        </div>
+        <!-- Message container for displaying game messages -->
+        <div id="message" class="message"></div>
+    </div>
+    <!-- JavaScript files for game logic -->
+    <script src="ship.js"></script>
+    <script src="gameboard.js"></script>
+    <script src="player.js"></script>
+    <script src="computerPlayer.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
