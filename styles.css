@@ -58,6 +58,7 @@ body {
 /* Styling for the board label */
 .board-label {
   font-size: var(--board-label-font-size);
+  font-weight: bold;
   text-align: center;
 }
 /* Styling for the game board */
